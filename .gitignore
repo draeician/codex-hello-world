@@ -1,0 +1,15 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Temp files
+.DS_Store
+.env
+*.log
