@@ -6,12 +6,13 @@ Teach Codex Web workflow: start task → branch/PR → test → iterate → merg
 
 ## Chapters
 
-1. Quickstart: Codex Web + GitHub HTTPS — see [docs/01-quickstart-web.md](docs/01-quickstart-web.md)
-2. Issue-Driven Codex Tasks — see [docs/03-issue-driven-tasks.md](docs/03-issue-driven-tasks.md)
-3. CI/CD with GitHub Actions — see [docs/04-ci-cd.md](docs/04-ci-cd.md)
-
-## Diagrams & Docs
 1. Overview diagram — see [docs/00-overview.md](docs/00-overview.md)
-2. Task template reference — see [docs/02-task-template.md](docs/02-task-template.md)
+2. Web quickstart — see [docs/01-quickstart-web.md](docs/01-quickstart-web.md)
+3. Issue-Driven Codex Tasks — see [docs/03-issue-driven-tasks.md](docs/03-issue-driven-tasks.md)
+4. CI/CD with GitHub Actions — see [docs/04-ci-cd.md](docs/04-ci-cd.md)
+5. Agent iteration loop — see [docs/05-agent-iteration-loop.md](docs/05-agent-iteration-loop.md)
 
 For more detail, explore the [/docs](docs) directory.
+
+## How to iterate
+Codex tasks are one-shot: start a new task, issue, or review loop for each improvement pass. Read [Chapter 05](docs/05-agent-iteration-loop.md) to plan the right iteration pattern for your branch.
