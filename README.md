@@ -13,6 +13,7 @@ Teach Codex Web workflow: start task → branch/PR → test → iterate → merg
 5. CI/CD with GitHub Actions — see [docs/04-ci-cd.md](docs/04-ci-cd.md)
 6. Agent iteration loop — see [docs/05-agent-iteration-loop.md](docs/05-agent-iteration-loop.md)
 7. Read-Only QA Mode & Recovery — see [docs/06-read-only-mode.md](docs/06-read-only-mode.md)
+8. Codex Workflow: End-to-End — see [docs/07-end-to-end-workflow.md](docs/07-end-to-end-workflow.md)
 
 For more detail, explore the [/docs](docs) directory.
 
