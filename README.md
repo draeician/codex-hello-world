@@ -1,10 +1,14 @@
 # Codex Playbook
 
+[![CI](https://github.com/draeician/codex-hello-world/actions/workflows/ci.yml/badge.svg)](https://github.com/draeician/codex-hello-world/actions/workflows/ci.yml)
+
 Teach Codex Web workflow: start task → branch/PR → test → iterate → merge.
 
 ## Chapters
-- [Quickstart: Codex Web + GitHub HTTPS](docs/01-quickstart-web.md)
-- [Issue-Driven Codex Tasks](docs/03-issue-driven-tasks.md)
+
+1. Quickstart: Codex Web + GitHub HTTPS — see [docs/01-quickstart-web.md](docs/01-quickstart-web.md)
+2. Issue-Driven Codex Tasks — see [docs/03-issue-driven-tasks.md](docs/03-issue-driven-tasks.md)
+3. CI/CD with GitHub Actions — see [docs/04-ci-cd.md](docs/04-ci-cd.md)
 
 ## Diagrams & Docs
 1. Overview diagram — see [docs/00-overview.md](docs/00-overview.md)
