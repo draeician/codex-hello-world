@@ -40,7 +40,7 @@
     - Cross-references `docs/04-ci-cd.md` so learners know when to dive deeper.
     - Task issue labeled `phase:training`, `type:docs`, `topic:workflow`.
 
-- [ ] Summarize CLI UX decisions [#P4-T6]
+- [x] Summarize CLI UX decisions [#P4-T6]
   - **Purpose:** Explain how deterministic naming, `--title`, and other CLI affordances improved Codex operator experience.
   - **Acceptance Criteria:**
     - New section (or doc) walks through the CLI option set with rationale, including a before/after CLI output diff for `--title`.

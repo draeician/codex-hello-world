@@ -16,7 +16,8 @@ Teach Codex Web workflow: start task → branch/PR → test → iterate → merg
 8. Codex Workflow: End-to-End — see [docs/07-end-to-end-workflow.md](docs/07-end-to-end-workflow.md)
 9. Discripper Workflow Case Study — see [docs/09-discripper-workflow-case-study.md](docs/09-discripper-workflow-case-study.md)
 10. CI Pragmatics Lessons — see [docs/10-ci-pragmatics-lessons.md](docs/10-ci-pragmatics-lessons.md)
-11. Contributing Tour — see [docs/08-contributing-tour.md](docs/08-contributing-tour.md)
+11. CLI UX Decisions — see [docs/11-cli-ux-decisions.md](docs/11-cli-ux-decisions.md)
+12. Contributing Tour — see [docs/08-contributing-tour.md](docs/08-contributing-tour.md)
 
 For more detail, explore the [/docs](docs) directory.
 
