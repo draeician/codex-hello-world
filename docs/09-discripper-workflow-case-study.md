@@ -78,11 +78,41 @@ Capturing the evolution inside the Draft PR ensured reviewers saw both the narra
 
 With review sign-off, the Draft PR flipped to Ready for Review, tests re-ran, and the branch merged cleanly. Follow-up tasks were filed for adjacent documentation (token patterns, branching flow) so each improvement stayed scoped to a single Codex run.
 
+## 5. Token patterns and configs
+
+The discripper team kept prompts portable by replacing environment-specific strings with tokens that resolve at run time. The shift from hard-coded values to tokens made it safe to re-run Codex across sandboxes while keeping Draft PRs readable.
+
+### Annotated diff: hard-coded vs tokenized
+
+```diff
+-export PROJECT_NAME="discripper-training"
+-python scripts/bootstrap.py --entry scripts/bootstrap.py --config config/discripper.yml
++export PROJECT_NAME="{PROJECT_NAME}"
++python scripts/bootstrap.py --entry {ENTRYPOINT} --config {CONFIG_PATH}
+```
+
+Swapping the literal values for `{PROJECT_NAME}`, `{ENTRYPOINT}`, and `{CONFIG_PATH}` keeps the command sequence unchanged while signaling to Codex that the concrete strings will be injected later. We captured this pattern in TASKS.md so every run reused the same substitution map instead of repeating edits in the PR body.
+
+### Token flow from PRD to Codex run
+
+| Token | Source of truth | Applied during |
+| --- | --- | --- |
+| `{PROJECT_NAME}` | PRD environment appendix | Draft PR evidence blocks and CLI exports |
+| `{ENTRYPOINT}` | TASKS.md acceptance criteria | Prompt snippets that invoke bootstrap scripts |
+| `{CONFIG_PATH}` | Repository config directory | Codex command block inside Draft PR |
+
+The PRD first established which parts of the workflow needed to be swappable. TASKS.md then restated the tokens so Codex knew which strings to expect, and the final prompt bound them to concrete values. This flow let reviewers confirm the substitutions in the Draft PR without seeing sensitive paths.
+
+### Keep templates in sync
+
+Whenever you introduce or rename a token, update the examples in [`docs/02-task-template.md`](02-task-template.md) so future task authors copy the latest placeholders. We also labeled the tracking issue for this work with `phase:training`, `type:docs`, and `topic:workflow` to match the rest of the phase, making it easy to discover all token-related follow-ups.
+
 ## Key lessons for learners
 
 1. **Start with the PRD.** Let the PRD define scope while TASKS.md captures the actionable slice Codex should ship.
 2. **Prime Codex with acceptance criteria.** Concrete checklists, command gates, and artifact expectations reduce retries.
 3. **Use Draft PRs as living briefs.** Combine summary, evidence, and next steps so reviewers can approve quickly.
 4. **Queue follow-on work deliberately.** Every merged chapter spawned a tracked task, preventing scope creep inside a single run.
+5. **Tokenize reusable values.** Carrying `{PROJECT_NAME}`, `{ENTRYPOINT}`, and `{CONFIG_PATH}` from PRD to Draft PR keeps reruns deterministic and avoids leaking environment details.
 
 By mirroring this cadence—PRD → TASKS → Codex run → Draft PR—you create a predictable feedback loop that scales across complex documentation efforts.

@@ -8,7 +8,7 @@
     - `README.md` “Chapters” list links to the new file, keeping language focused on learning objectives rather than product details.
     - Labels `phase:training`, `type:docs`, and `topic:workflow` applied to the tracking issue for this task.
 
-- [ ] Add “Token Patterns and Configs” section [#P4-T2]
+- [x] Add “Token Patterns and Configs” section [#P4-T2]
   - **Purpose:** Teach the reusable tokenization technique (`{PROJECT_NAME}`, `{ENTRYPOINT}`, `{CONFIG_PATH}`) that let discripper reuse prompts safely.
   - **Acceptance Criteria:**
     - Documentation (either a new doc or section within the case study) contrasts hard-coded values with tokenized variants using an annotated diff.
