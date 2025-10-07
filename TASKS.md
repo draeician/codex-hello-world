@@ -24,7 +24,7 @@
     - Cross-links to existing Chapter 05 on iteration loops and Chapter 07 on end-to-end workflow for continuity.
     - Task issue labeled `phase:training`, `type:docs`, `topic:workflow`.
 
-- [ ] Expand read-only mode recovery playbook [#P4-T4]
+- [x] Expand read-only mode recovery playbook [#P4-T4]
   - **Purpose:** Give learners reliable phrasing, detection cues, and retry instructions drawn from discripper’s real incidents.
   - **Acceptance Criteria:**
     - Extends `docs/06-read-only-mode.md` (or adds an appendix) with a scenario-based checklist that references Draft PR recovery steps.
