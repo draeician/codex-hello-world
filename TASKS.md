@@ -32,7 +32,7 @@
     - Points readers to where to place this checklist in future PR task prompts.
     - Task issue labeled `phase:training`, `type:docs`, `topic:workflow`.
 
-- [ ] Capture CI pragmatics lessons [#P4-T5]
+- [x] Capture CI pragmatics lessons [#P4-T5]
   - **Purpose:** Teach how the team minimized CI surface area, focused on green-path checks, and reported results cleanly.
   - **Acceptance Criteria:**
     - Document outlines the minimum viable test/build commands (e.g., selective `pnpm` invocations) and how to summarize them in PR bodies.
