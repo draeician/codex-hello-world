@@ -107,6 +107,34 @@ The PRD first established which parts of the workflow needed to be swappable. TA
 
 Whenever you introduce or rename a token, update the examples in [`docs/02-task-template.md`](02-task-template.md) so future task authors copy the latest placeholders. We also labeled the tracking issue for this work with `phase:training`, `type:docs`, and `topic:workflow` to match the rest of the phase, making it easy to discover all token-related follow-ups.
 
+## 6. Branching and iteration flow
+
+To keep the branch history readable, the team followed a single Codex run per branch and recorded every follow-up as its own Issue. The flow mirrors the iteration guidance in [Chapter 05](05-agent-iteration-loop.md) and the end-to-end checkpoints in [Chapter 07](07-end-to-end-workflow.md).
+
+```text
+main ──┐
+       ├─ codex/docs-branching-flow ➊
+       │      ↓ Draft PR opened ➋
+       │      ↓ Review feedback loop ➌
+       └─ codex/docs-branching-flow-follow-up ← new Issue + branch ➍
+```
+
+1. **Start from `main` with a deterministic branch name.** Prefix the branch with `codex/` so CI, automation, and reviewers know it came from a Codex task.
+2. **Open a Draft PR before asking for review.** The Draft PR body carries the task summary, command transcripts, and any open questions. Updates stay confined to the same branch until the checklist is satisfied.
+3. **Capture iteration feedback inside the Draft PR.** When reviewers request changes, run Codex again with instructions to continue on the existing branch. Each response references the same Issue and Draft PR so history stays linear.
+4. **Create a new Issue for follow-up work.** If the feedback requires broader edits, file a fresh Issue linked from the Draft PR and start a new branch (for example, `codex/docs-branching-flow-follow-up`). This keeps future runs scoped while preserving traceability back to the conversation that spawned them.
+
+### Example Codex request for a Draft PR + mirrored Issue
+
+```
+codex task run "#P4-T3 Document branching & iteration flow" \
+  --branch codex/docs-branching-flow \
+  --open-draft-pr "Document branching & iteration flow" \
+  --mirror-issue "https://github.com/example/discripper/issues/123"
+```
+
+The command names the branch, opens a Draft PR with the same title, and mirrors progress to the GitHub Issue that tracks the task. Re-run Codex only when continuing work on the existing branch; otherwise, file a new Issue and branch so the Draft PR history stays focused on one objective.
+
 ## Key lessons for learners
 
 1. **Start with the PRD.** Let the PRD define scope while TASKS.md captures the actionable slice Codex should ship.

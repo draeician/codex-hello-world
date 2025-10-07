@@ -16,7 +16,7 @@
     - References how learners should update any template snippets in `docs/02-task-template.md` after adopting tokens.
     - Task issue carries labels `phase:training`, `type:docs`, `topic:workflow`.
 
-- [ ] Document branching & iteration flow [#P4-T3]
+- [x] Document branching & iteration flow [#P4-T3]
   - **Purpose:** Demonstrate the one-shot Codex run pattern, Draft PR usage, and GitHub issue mirroring that kept the discripper branch history clean.
   - **Acceptance Criteria:**
     - Adds a flow diagram or step list illustrating branch creation, Draft PR, feedback loops, and follow-up issue creation.
