@@ -1,6 +1,6 @@
 ## Phase 4 – Advanced Workflow Case Study (Lessons from discripper)
 
-- [ ] Add “Discripper Workflow Case Study” chapter [#P4-T1]
+- [x] Add “Discripper Workflow Case Study” chapter [#P4-T1]
   - **Purpose:** Show learners how the discripper effort flowed from PRD → TASKS → CODER → Draft PR, emphasizing why tightly scoped acceptance criteria stabilized automation.
   - **Acceptance Criteria:**
     - New doc `docs/09-discripper-workflow-case-study.md` (or similar numbering) narrates the end-to-end planning-to-merge loop with anonymized artifacts.
