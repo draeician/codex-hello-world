@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-hello-world"
+version = "0.0.0"
+description = "Codex Playbook examples"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "Codex" }
+]
+license = { text = "MIT" }
+dependencies = [
+  "pytest-cov>=4.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "src"
+]
