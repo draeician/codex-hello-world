@@ -14,10 +14,11 @@ Teach Codex Web workflow: start task → branch/PR → test → iterate → merg
 6. Agent iteration loop — see [docs/05-agent-iteration-loop.md](docs/05-agent-iteration-loop.md)
 7. Read-Only QA Mode & Recovery — see [docs/06-read-only-mode.md](docs/06-read-only-mode.md)
 8. Codex Workflow: End-to-End — see [docs/07-end-to-end-workflow.md](docs/07-end-to-end-workflow.md)
-9. Discripper Workflow Case Study — see [docs/09-discripper-workflow-case-study.md](docs/09-discripper-workflow-case-study.md)
-10. CI Pragmatics Lessons — see [docs/10-ci-pragmatics-lessons.md](docs/10-ci-pragmatics-lessons.md)
-11. CLI UX Decisions — see [docs/11-cli-ux-decisions.md](docs/11-cli-ux-decisions.md)
-12. Contributing Tour — see [docs/08-contributing-tour.md](docs/08-contributing-tour.md)
+9. Contributing Tour — see [docs/08-contributing-tour.md](docs/08-contributing-tour.md)
+10. Discripper Workflow Case Study — see [docs/09-discripper-workflow-case-study.md](docs/09-discripper-workflow-case-study.md)
+11. CI Pragmatics Lessons — see [docs/10-ci-pragmatics-lessons.md](docs/10-ci-pragmatics-lessons.md)
+12. CLI UX Decisions — see [docs/11-cli-ux-decisions.md](docs/11-cli-ux-decisions.md)
+13. Documentation Discipline Checklist — see [docs/12-documentation-discipline.md](docs/12-documentation-discipline.md)
 
 For more detail, explore the [/docs](docs) directory.
 
