@@ -56,7 +56,7 @@
     - Clarifies expectations for README/Table-of-Contents updates whenever new chapters are introduced.
     - Task issue labeled `phase:training`, `type:docs`, `topic:workflow`.
 
-- [ ] Queue CODER doc-generation issues [#P4-T8]
+- [x] Queue CODER doc-generation issues [#P4-T8]
   - **Purpose:** Ensure every new Phase 4 lesson spawns a dedicated CODER follow-up task once this phase merges.
   - **Acceptance Criteria:**
     - For each of #P4-T1 through #P4-T7, a GitHub issue is prepared (using the Codex task template) directing CODER to draft the actual instructional content.
