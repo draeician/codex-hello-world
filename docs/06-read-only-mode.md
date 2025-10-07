@@ -29,12 +29,32 @@ Codex spun up a sandbox that has **read** access to this repo, but not **write**
 - ✅ “Add file `docs/...md`, update `README.md` links. **Commit to the new branch**.”  
 - ⚠️ “Continue work on branch …” often fails; prefer “Create a new branch …”.
 
-## Troubleshooting checklist
-- [ ] Repo re-selected in Codex Web  
-- [ ] New branch requested in the task  
-- [ ] No deletion of the active PR branch  
-- [ ] Connector shows repo authorized  
-- [ ] (If needed) tiny web commit made to refresh visibility
+## Scenario recovery playbook
+
+> **Scenario:** Codex reports read-only mode right after you ask it to resume work on an open Draft PR.
+
+Walk the checklist in order and re-run the task after each fix. Steps reference the **Quick fixes** above so the recovery path stays consistent across playbooks.
+
+- [ ] Confirm the repo is re-selected in Codex Web *(Quick fix #1)*
+- [ ] Update the task wording to create a brand-new branch and Draft PR *(Quick fix #2)*
+- [ ] Avoid deleting or reusing the prior Draft PR branch *(Quick fix #4)*
+- [ ] Refresh the GitHub connector authorization *(Quick fix #5)*
+- [ ] As a last resort, make a tiny web commit so the repo resurfaces *(Quick fix #3)*
+
+### Detection & resolution snippet
+
+```
+Coder: "Continue work on branch codex/docs-123?"
+Codex: "I’m operating in read-only QA mode, so I can’t edit or push to that branch."
+Coder: "Start a new branch named codex/docs-456, open a Draft PR, and recreate the pending changes."
+Codex: "New branch codex/docs-456 created, Draft PR opened, updates applied."
+```
+
+Use the same phrasing—**“Start a new branch … open a Draft PR …”**—when Codex surfaces the read-only warning; it reliably flips the session back into write mode.
+
+### Where to place the checklist
+
+Include a condensed version of the checklist in every Codex PR task prompt, ideally inside a “Before you run this task” block. That reminder trains operators to re-check branch selection, Draft PR flow, and connector auth *before* requesting changes.
 
 ## FAQ
 **Why does Codex keep opening new PRs?**  
