@@ -19,5 +19,9 @@ Teach Codex Web workflow: start task → branch/PR → test → iterate → merg
 
 For more detail, explore the [/docs](docs) directory.
 
+## Operating Mode
+
+This repository runs in a guided sandbox for Codex training. See [`.codex/instructions/LOCAL_MODE.md`](.codex/instructions/LOCAL_MODE.md) for the boundaries that keep each exercise isolated and self-contained.
+
 ## How to iterate
 Codex tasks are one-shot: start a new task, issue, or review loop for each improvement pass. Read [Chapter 05](docs/05-agent-iteration-loop.md) to plan the right iteration pattern for your branch.
