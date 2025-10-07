@@ -48,7 +48,7 @@
     - Links to any CLI reference material in the repo so readers can experiment.
     - Task issue labeled `phase:training`, `type:docs`, `topic:workflow`.
 
-- [ ] Reinforce documentation discipline [#P4-T7]
+- [x] Reinforce documentation discipline [#P4-T7]
   - **Purpose:** Show that every task concludes with documentation updates and changelog alignment, mirroring discripper’s practice.
   - **Acceptance Criteria:**
     - Adds guidance on closing each task with doc updates, release notes, and changelog entries, with a sample checklist learners can reuse.
